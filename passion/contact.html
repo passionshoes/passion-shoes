@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passion - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact { padding: 80px 40px; max-width: 700px; margin: auto; text-align: center; }
+    .contact h1 { font-size: 2rem; margin-bottom: 20px; }
+    .contact p { margin-bottom: 30px; font-size: 1rem; color: #444; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    input, textarea {
+      padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;
+    }
+    button {
+      padding: 12px; background: #111; color: #fff; border: none; border-radius: 6px;
+      font-size: 1rem; cursor: pointer; transition: 0.3s;
+    }
+    button:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">PASSION</span>
+  <nav>
+    <a href="index.html">Home</a>
+
+    <!-- Dropdown Shop Menu -->
+    <div class="dropdown">
+      <a href="shop.html">Shop ▾</a>
+      <div class="dropdown-content">
+        <a href="shop.html#men">Men</a>
+        <a href="shop.html#women">Women</a>
+        <a href="shop.html#collections">Collections</a>
+      </div>
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <input type="text" placeholder="Search">
+    <i class="fas fa-search"></i>
+  </div>
+</header>
+
+<section class="contact">
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you. Fill out the form below and we’ll get back to you soon.</p>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Passion Shoes. All rights reserved.
+</footer>
+
+</body>
+</html>

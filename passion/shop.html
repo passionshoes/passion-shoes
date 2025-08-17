@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PASSION - Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Include same HEADER here -->
+  <header class="site-header">
+     <span class="logo">PASSION</span>
+  <nav>
+    <a href="index.html">Home</a>
+
+    <!-- Dropdown Shop Menu -->
+    <div class="dropdown">
+      <a href="shop.html">Shop ▾</a>
+      <div class="dropdown-content">
+        <a href="shop.html#men">Men</a>
+        <a href="shop.html#women">Women</a>
+        <a href="shop.html#collections">Collections</a>
+      </div>
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <input type="text" placeholder="Search">
+    <i class="fas fa-search"></i>
+  </div>
+  </header>
+
+  <!-- Shop Page -->
+  <section class="shop-header">
+    <h1>Shop Shoes</h1>
+    <div class="filter-bar">
+      <select>
+        <option>Sort by</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Newest</option>
+        <option>Best Sellers</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="products-grid">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/400x400" alt="Shoe 1">
+      <div class="info">
+        <h3>Speed Runner</h3>
+        <p>$120</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/400x400" alt="Shoe 2">
+      <div class="info">
+        <h3>Urban Sneaker</h3>
+        <p>$90</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="https://via.placeholder.com/400x400" alt="Shoe 3">
+      <div class="info">
+        <h3>Trail Blazer</h3>
+        <p>$150</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
