@@ -235,41 +235,6 @@ footer {
   .main-nav,.search-btn{display:none;}
   .hamburger{display:flex;}
 }
-/* =======================
-   Mobile Responsive Fixes
-   ======================= */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .redirect {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .filter-sort {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 /* Dropdown Menu */
 .dropdown {
   position: relative;
@@ -322,4 +287,5 @@ footer {
   h2 { font-size: 1.5rem; }
   p, a.btn { font-size: 0.9rem; }
 }
+
 
