@@ -301,3 +301,20 @@ footer {
   transform: scale(1.05);
   box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
   }
+/* Scale-down layout for small screens */
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.8); /* Shrinks entire page */
+    transform-origin: top center; /* Keeps layout centered */
+    width: 125%; /* Compensates for shrink */
+  }
+
+  header, main, footer {
+    transform: none; /* keep container spacing correct */
+  }
+
+  .nav-links li {
+    margin: 0 10px; /* keeps nav items evenly spaced */
+  }
+}
+
