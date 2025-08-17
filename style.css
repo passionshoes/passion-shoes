@@ -287,5 +287,44 @@ footer {
   h2 { font-size: 1.5rem; }
   p, a.btn { font-size: 0.9rem; }
 }
+/* ========================
+   Shrinked Layout for Mobile
+   ======================== */
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.8); /* Shrinks entire page */
+    transform-origin: top center; /* Keeps layout centered */
+    width: 125%; /* Compensates for shrink */
+  }
+
+  header {
+    transform: scale(0.9); /* Slightly shrink header separately if needed */
+    transform-origin: top center;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    justify-content: center; /* Center menu */
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 0 8px; /* Shrink spacing between menu items */
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Smaller logo on mobile */
+  }
+
+  .search-bar input {
+    width: 150px; /* Smaller search input */
+    font-size: 0.8rem;
+  }
+
+  a.btn {
+    font-size: 0.85rem; /* Shrink buttons */
+    padding: 8px 14px;
+  }
+  }
 
 
