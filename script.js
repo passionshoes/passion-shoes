@@ -69,3 +69,21 @@
     lastScroll = current;
   });
 })();
+// Simple Filter & Sort (Shop Page)
+document.addEventListener("DOMContentLoaded", () => {
+  const filter = document.getElementById("filter");
+  const sort = document.getElementById("sort");
+
+  if (filter && sort) {
+    filter.addEventListener("change", () => {
+      alert(`Filter applied: ${filter.value}`);
+      // Replace this alert with Ecwid API calls if needed
+    });
+
+    sort.addEventListener("change", () => {
+      alert(`Sorting by: ${sort.value}`);
+      // Replace this alert with Ecwid API calls if needed
+    });
+  }
+});
+
