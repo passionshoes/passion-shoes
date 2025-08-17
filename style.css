@@ -317,4 +317,9 @@ footer {
     margin: 0 10px; /* keeps nav items evenly spaced */
   }
 }
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  p, a.btn { font-size: 0.9rem; }
+}
 
