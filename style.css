@@ -335,5 +335,24 @@ header .nav-container {
         justify-content: center;
     }
 }
+.redirect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .redirect {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redirect a.btn {
+        margin-top: 15px;
+    }
+}
 
 
