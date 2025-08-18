@@ -302,15 +302,21 @@ header .nav-container {
 
 /* For mobile */
 @media (max-width: 768px) {
-    .redirect {
-        flex-direction: column;
-        text-align: center;
-    }
+  header {
+    padding: 8px 10px;
+    height: auto; /* let it adjust naturally */
+  }
 
-    .redirect a.btn {
-        margin-top: 15px;
-    }
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    padding: 3px 6px;
+    font-size: 0.9rem;
+  }
 }
+
 .hero h1 {
     font-size: 2rem;
     text-align: center;
@@ -398,6 +404,7 @@ header .nav-container {
     color: #555;
     margin-top: 10px;
 }
+
 
 
 
