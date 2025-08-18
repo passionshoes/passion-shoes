@@ -3,17 +3,18 @@ header {
   display: flex;
   justify-content: center; /* everything centered */
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 20px; /* reduce padding */
   background: #fff;
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
   z-index: 1000;
-  gap: 50px;
+  gap: 30px; /* reduce gap between elements */
+  height: 60px; /* optional: fixed header height */
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem; /* smaller logo */
   font-weight: 700;
 }
 
@@ -21,20 +22,20 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  position: relative;
+  gap: 15px; /* reduce gap between nav items */
 }
 
 nav a {
   text-decoration: none;
   color: #111;
   font-weight: 600;
-  padding: 8px 12px;
+  padding: 4px 8px; /* smaller padding */
   transition: 0.3s;
 }
 
-nav a:hover {
-  color: #555;
+/* Cart icon shrink */
+.cart-container {
+  font-size: 1rem; /* smaller cart icon */
 }
 
 /* Dropdown menu */
@@ -397,6 +398,7 @@ header .nav-container {
     color: #555;
     margin-top: 10px;
 }
+
 
 
 
