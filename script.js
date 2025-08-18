@@ -116,11 +116,15 @@ function displayCart() {
     const container = document.getElementById('cart-items');
     if (!container) return;
     container.innerHTML = '';
-    if (cart.length === 0) {
-        container.innerHTML = '<p>Your cart is empty</p>';
-        return;
-    }
-
+   if (cart.length === 0) {
+    container.innerHTML = `
+        <div class="empty-cart-message">
+            <h2>Your cart is empty</h2>
+            <p>Add something into your cart and it will show up here.</p>
+        </div>
+    `;
+    return;
+}
     cart.forEach((item, index) => {
         const div = document.createElement('div');
         div.classList.add('cart-item');
@@ -182,6 +186,7 @@ function displayCart() {
     checkoutBtn.onclick = paypalCheckout;
     container.appendChild(checkoutBtn);
 }
+
 
 
 
