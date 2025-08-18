@@ -149,5 +149,39 @@ function paypalCheckout() {
 if (document.getElementById('cart-items')) {
     displayCart();
 }
+function displayCart() {
+    const container = document.getElementById('cart-items');
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (cart.length === 0) {
+        container.innerHTML = `
+            <div style="text-align:center; margin-top:50px;">
+                <h2 style="font-size:2rem; font-weight:bold; color:#111;">Your cart is empty</h2>
+                <p style="font-size:1rem; color:#555; margin-top:10px;">
+                    Add something into your cart and it will show up here.
+                </p>
+            </div>
+        `;
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `
+            <span>${item.name} - $${item.price}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+    });
+
+    // Add Checkout Button
+    const checkoutBtn = document.createElement('button');
+    checkoutBtn.textContent = "Continue to PayPal Checkout";
+    checkoutBtn.onclick = paypalCheckout;
+    container.appendChild(checkoutBtn);
+}
+
 
 
