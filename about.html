@@ -36,29 +36,28 @@
 
 <!-- HEADER -->
 <header>
-  <span class="logo">PASSION</span>
-  <nav>
-    <a href="index.html">Home</a>
-
-    <!-- Dropdown Shop Menu -->
-    <div class="dropdown">
-      <a href="shop.html">Shop ▾</a>
-      <div class="dropdown-content">
-        <a href="shop.html#men">Men</a>
-        <a href="shop.html#women">Women</a>
-        <a href="shop.html#collections">Collections</a>
+  <div class="header-container">
+    <span class="logo">PASSION</span>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="shop.html">Shop ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="collections.html">Collections</a></li>
+        </ul>
       </div>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+      </div>
+      <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
     </div>
-
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Search Box -->
-  <div class="search-box">
-    <input type="text" placeholder="Search">
-    <i class="fas fa-search"></i>
   </div>
 </header>
 
@@ -89,3 +88,4 @@
 
 </body>
 </html>
+
