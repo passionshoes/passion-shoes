@@ -86,4 +86,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Update cart count badge
+function updateCartCount() {
+    document.getElementById('cart-count').textContent = cart.length;
+}
+updateCartCount();
+
+// Add item to cart
+function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    alert(name + " added to cart!");
+}
+
+// Remove item from cart
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+    updateCartCount();
+}
+
+// Display cart on cart.html
+function displayCart() {
+    const container = document.getElementById('cart-items');
+    if (!container) return;
+    container.innerHTML = '';
+    if (cart.length === 0) {
+        container.innerHTML = '<p>Your cart is empty</p>';
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `
+            <span>${item.name} - $${item.price}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+    });
+
+    // Add Checkout Button
+    const checkoutBtn = document.createElement('button');
+    checkoutBtn.textContent = "Continue to PayPal Checkout";
+    checkoutBtn.onclick = paypalCheckout;
+    container.appendChild(checkoutBtn);
+}
+
+// PayPal Checkout
+function paypalCheckout() {
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+    let paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUR_PAYPAL_EMAIL&currency_code=USD&amount=${total}`;
+    window.location.href = paypalUrl;
+}
+
+// Call displayCart on cart page
+if (document.getElementById('cart-items')) {
+    displayCart();
+}
+
 
