@@ -349,6 +349,22 @@ header .nav-container {
         flex-direction: column;
         text-align: center;
     }
+.empty-cart-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.empty-cart-message h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.empty-cart-message p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
 
     .redirect a.btn {
         margin-top: 15px;
@@ -374,6 +390,7 @@ header .nav-container {
 .cart-item button:hover {
     background: #333;
 }
+
 
 
 
