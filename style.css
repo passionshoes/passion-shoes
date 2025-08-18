@@ -404,6 +404,76 @@ header .nav-container {
     color: #555;
     margin-top: 10px;
 }
+/* Header container */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto; /* center the whole header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* smaller padding */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Header right (search + cart) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Search bar */
+.search-bar input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Cart icon */
+.cart-icon {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #111;
+}
+
+/* Mobile adjustments */
+@media(max-width:768px){
+  .nav-links {
+    display: none;
+  }
+  .header-right {
+    gap: 10px;
+  }
+}
+
 
 
 
